@@ -51,7 +51,6 @@ async def fetch_vv_img_preview(item: VVItem) -> str | bytes:
     :param item: VVItem 对象
     :return: 图片预览的字节内容，如果无法获取则返回 None
     """
-    # 假设图片链接是通过文件名生成的
     preview_bash_url = r"https://vv-indol.vercel.app/api/preview"
     episode_match = re.search(r"\[P(\d+)\]", item["filename"])
     time_match = re.search(r"^(\d+)m(\d+)s$", item["timestamp"])
