@@ -4,7 +4,6 @@ from nonebot.adapters.onebot.v11 import (
     GroupMessageEvent,
     MessageEvent,
 )
-from nonebot.log import logger
 
 from .utils import (
     fetch_vv_list,
