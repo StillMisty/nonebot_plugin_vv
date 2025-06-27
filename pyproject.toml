@@ -1,6 +1,6 @@
 [project]
 name = "nonebot-plugin-vv"
-version = "0.1.0"
+version = "0.2.0"
 authors = [{ name = "StillMisty", email = "1772797842@qq.com" }]
 description = ""
 readme = "README.md"
