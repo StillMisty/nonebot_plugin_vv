@@ -4,7 +4,6 @@ from nonebot.adapters.onebot.v11 import (
     GroupMessageEvent,
     MessageEvent,
 )
-from nonebot.plugin import PluginMetadata
 
 from .utils import (
     fetch_vv_list,
@@ -17,23 +16,13 @@ from nonebot_plugin_alconna import (  # noqa: E402
     Args,
     CommandMeta,
     Match,
-    Option,
     on_alconna,
-)
-
-__plugin_meta__ = PluginMetadata(
-    name="维维语录搜索器",
-    description="根据关键词搜索维维语录",
-    type="application",
-    usage="vv [语录内容]",
-    homepage="https://github.com/StillMisty/nonebot_plugin_vv",
-    supported_adapters={"~onebot.v11"},
 )
 
 vv = on_alconna(
     Alconna(
         "vv",
-        Option("content", Args["content", str]),
+        Args["content", str, ...],
         meta=CommandMeta(
             compact=True,
             description="搜索vv语录",
