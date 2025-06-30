@@ -4,6 +4,7 @@ from nonebot.adapters.onebot.v11 import (
     GroupMessageEvent,
     MessageEvent,
 )
+from nonebot.plugin import PluginMetadata
 
 from .utils import (
     fetch_vv_list,
@@ -17,6 +18,15 @@ from nonebot_plugin_alconna import (  # noqa: E402
     CommandMeta,
     Match,
     on_alconna,
+)
+
+__plugin_meta__ = PluginMetadata(
+    name="维维表情包搜索器",
+    description="根据关键词搜索维维语录以及对应图片",
+    type="application",
+    usage="vv [语录内容]",
+    homepage="https://github.com/StillMisty/nonebot_plugin_vv",
+    supported_adapters={"~onebot.v11"},
 )
 
 vv = on_alconna(
